@@ -1,0 +1,92 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: pingfontweb,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212121;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+    content:' ';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+}
+.container{
+    position: relative;
+    width: 80%;
+    margin: 5em auto;
+}
+.side-bar,.content{
+    float: left;
+}
+.side-bar{
+    width: 20%;
+}
+.side-bar a{
+    display: block;
+    width: 90%;
+    height: 2em;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2em;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.side-bar a:hover{
+    background: #f5f5f5;
+}
+.hover{
+    background: #f5f5f5;
+}
+.side-bar a::before{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    background: #bdbdbd;
+    float: left;
+    margin-left: .7em;
+    margin-top: .7em;
+    border-radius: 2px;
+}
+.side-bar a.app::before{
+    background-color: #f2514b;
+}
+.side-bar a.mobile-web::before{
+    background-color: #3ba3f8;
+}
+.side-bar a.pc-webapp::before{
+    background-color: #5b69c3;
+}
+.side-bar a.wechat::before{
+    background-color: #3ea142;
+}
+.side-bar a.qr::before{
+    background-color: #d4e24a;
+}
+.content{
+    position: relative;
+    padding: 10px;
+    width: 80%;
+}
+.content .grid-item{
+    width: 200px;
+    height: 110px;
+    padding: 5px;
+    text-align: center;
+    line-height: 3;
+    border: 1px solid rgba(12,12,12,.5);
+    box-shadow: 1px 2px 3px rgba(12,12,12,.3);
+    -webkit-transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
